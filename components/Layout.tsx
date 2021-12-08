@@ -7,34 +7,26 @@ type Props = {
   title?: string
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
+const Layout = ({ children, title = 'ChatApp' }: Props) => (
+  <div >
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
+    <div className="max-w-lg w-full m-auto min-h-screen h-full">
+      <header className="pb-4 ">
+        <nav className="bg-gradient-to-r from-purple-600 to-purple-400 py-2 px-3 pb-8 ">
+          <Link href="/">
+            <a className="text-white text-2xl font-bold">ChatApp</a>
+          </Link>
+        </nav>
+      </header>
+      {children}
+      <footer className="w-full flex items-center justify-center" >
+        <span>&copy; <Link href="https://github.com/sluucke"><a target="_blank" rel="noreferrer" className="hover:text-purple-600 transition-colors duration-200 ease-in-out">Sluucke</a></Link> - 2021</span>
+      </footer>
+    </div>
   </div>
 )
 

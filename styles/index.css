@@ -1,0 +1,43 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+footer{
+  min-height: 10px;
+  margin-top: auto; 
+}
+
+#content-footer {
+  min-height: calc(100vh - 100px);
+}
+#chat {
+  min-height: calc(100vh - 170px);
+  max-height: calc(100vh - 170px);
+}
