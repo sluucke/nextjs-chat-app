@@ -20,7 +20,7 @@ const ChatPage = () => {
     if (!name) {
       router.push('/')
     }
-    const socket = io('http://132.226.245.108:3002', {
+    const socket = io('/', {
       path: "/api/socketio",
     })
 
